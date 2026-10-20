@@ -1,0 +1,23 @@
+proyek:
+  nama: "TransactionGuard AI"
+  sesi: 1
+  judul_penelitian: "Perbandingan Algoritma Logistic Regression, Decision Tree, dan Random Forest untuk Prediksi Keterlambatan Pembayaran Tagihan"
+
+data:
+  path_dataset: "data/transactions.csv"
+  target_column: "late_payment"
+  test_size: 0.2
+  random_state: 42
+
+anomali:
+  zscore_threshold: 3.0
+  iqr_multiplier: 1.5
+  fitur_diperiksa:
+    - "invoice_amount"
+    - "discount"
+    - "customer_transaction_count"
+    - "customer_avg_payment_delay"
+
+model:
+  simpan_terbaik: "models/best_model.pkl"
+  hasil_dir: "outputs/results"
